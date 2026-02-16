@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Ramzan Gift - Ramadan Mubarak</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="ramadan-bg">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+        <div class="crescent-moon"></div>
+        <div class="lanterns">
+            <div class="lantern"></div>
+            <div class="lantern"></div>
+            <div class="lantern"></div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="content-wrapper">
+            <!-- Header -->
+            <div class="islamic-pattern">
+                <h1 class="main-title">Ramzan Gift</h1>
+                <p class="subtitle">Share the blessings of Ramadan</p>
+            </div>
+
+            <!-- Dynamic Content Sections -->
+            <div id="landingSection" class="section active">
+                <div class="input-group">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" id="userName" placeholder="Enter Your Name" class="ramadan-input">
+                </div>
+                <button id="getGiftBtn" class="ramadan-btn pulse">
+                    <i class="fas fa-gift"></i> Get Your Ramadan Gift
+                </button>
+            </div>
+
+            <div id="progressSection" class="section">
+                <div id="personalizedGreeting">
+                    <h2 class="greeting">🌙 Ramadan Mubarak, <span id="displayName"></span>!</h2>
+                    <p class="blessing">May Allah bless you with happiness and prosperity this Ramadan.</p>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <span id="progressPercentage">0%</span>
+                        <span id="referralCount">0/15 referrals</span>
+                    </div>
+                    <p class="progress-text">To unlock your Ramadan Gift, share this link with 15 friends.</p>
+                </div>
+
+                <div class="share-container">
+                    <div class="referral-link-wrapper">
+                        <input type="text" id="referralLink" readonly>
+                        <button id="copyLinkBtn" class="copy-btn">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="share-buttons">
+                        <button id="whatsappShareBtn" class="share-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="formSection" class="section">
+                <h2 class="form-title">Claim Your Gift</h2>
+                <form id="giftForm">
+                    <div class="form-group">
+                        <i class="fas fa-phone-alt form-icon"></i>
+                        <input type="tel" id="mobileNumber" placeholder="Mobile Number" required class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <i class="fas fa-city form-icon"></i>
+                        <input type="text" id="city" placeholder="City" required class="form-input">
+                    </div>
+                    
+                    <div class="terms-group">
+                        <input type="checkbox" id="termsCheckbox" required>
+                        <label for="termsCheckbox">I agree to the <a href="terms.html" target="_blank">terms and conditions</a></label>
+                    </div>
+                    
+                    <button type="submit" id="claimGiftBtn" class="ramadan-btn">
+                        <i class="fas fa-gift"></i> Claim My Gift
+                    </button>
+                </form>
+            </div>
+
+            <div id="successSection" class="section">
+                <div class="success-message">
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <h2>🎁 Congratulations!</h2>
+                    <p>Your Ramadan Gift request has been received. We will contact you soon.</p>
+                    <button id="homeBtn" class="ramadan-btn">Back to Home</button>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="terms.html">Terms & Conditions</a>
+                <span class="separator">|</span>
+                <a href="admin.html">Admin</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK (pehle yeh) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+<!-- Phir aapka config (doosra) -->
+<script src="js/firebase-config.js"></script>
+
+<!-- Phir main.js (teesra) -->
+<script src="js/main.js"></script>
+</body>
+</html>
